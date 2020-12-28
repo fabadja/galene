@@ -41,6 +41,8 @@ func main() {
 	flag.BoolVar(&group.UseMDNS, "mdns", false, "gather mDNS addresses")
 	flag.BoolVar(&group.ICERelayOnly, "relay-only", false,
 		"require use of TURN relays for all media traffic")
+	flag.StringVar(&group.ICEURL, "ice-url", "",
+		"`url` with ICE credentials")
 	flag.Parse()
 
 	if cpuprofile != "" {
